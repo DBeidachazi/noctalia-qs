@@ -1,6 +1,16 @@
 # noctalia-qs
 
-**noctalia-qs** is a custom fork of [Quickshell](https://quickshell.org) — a flexible QtQuick-based desktop shell toolkit for Wayland. It serves as the shell framework powering [Noctalia Shell](https://github.com/noctalia-dev/noctalia-shell).
+> [!NOTE]
+> This is a **community-maintained fork** of the archived [noctalia-dev/noctalia-qs](https://github.com/noctalia-dev/noctalia-qs). It exists to keep [Noctalia Shell v4](https://github.com/DBeidachazi/noctalia-shell) (AUR: `noctalia-legacy-v4`) building and running on current Arch Linux.
+> AUR package: [`noctalia-qs`](https://aur.archlinux.org/packages/noctalia-qs), built from [`packaging/aur/PKGBUILD`](packaging/aur/PKGBUILD).
+>
+> Changes since upstream v0.0.12:
+> - **Qt 6.12 build fix**: ported upstream Quickshell's "use MOC includes instead of opaque pointer definitions" so Hyprland/i3 IPC and PipeWire compile again (`Meta Types must be fully defined`).
+> - Includes the fixes upstream merged after v0.0.12 but never released: PipeWire use-after-free and device-disconnect crash fixes, Bluetooth rfkill unblock, ObjectModel reorder fix.
+>
+> Please report problems with this fork here, not to the upstream Noctalia or Quickshell projects.
+
+**noctalia-qs** is a custom fork of [Quickshell](https://quickshell.org) — a flexible QtQuick-based desktop shell toolkit for Wayland. It serves as the shell framework powering [Noctalia Shell](https://github.com/DBeidachazi/noctalia-shell).
 
 ## What is noctalia-qs?
 
