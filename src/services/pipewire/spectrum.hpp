@@ -13,10 +13,10 @@
 #include <qtypes.h>
 
 #include "node.hpp"
+#include "qml.hpp"
 
 namespace qs::service::pipewire {
 
-class PwNodeIface;
 class PwSpectrumStream;
 
 

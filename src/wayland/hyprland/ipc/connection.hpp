@@ -25,9 +25,9 @@ class HyprlandToplevel;
 
 } // namespace qs::hyprland::ipc
 
-Q_DECLARE_OPAQUE_POINTER(qs::hyprland::ipc::HyprlandWorkspace*);
-Q_DECLARE_OPAQUE_POINTER(qs::hyprland::ipc::HyprlandMonitor*);
-Q_DECLARE_OPAQUE_POINTER(qs::hyprland::ipc::HyprlandToplevel*);
+Q_MOC_INCLUDE("hyprland_toplevel.hpp")
+Q_MOC_INCLUDE("monitor.hpp")
+Q_MOC_INCLUDE("workspace.hpp")
 
 namespace qs::hyprland::ipc {
 
@@ -81,17 +81,9 @@ public:
 
 	[[nodiscard]] HyprlandMonitor* monitorFor(QuickshellScreenInfo* screen);
 
-	[[nodiscard]] QBindable<HyprlandMonitor*> bindableFocusedMonitor() const {
-		return &this->bFocusedMonitor;
-	}
-
-	[[nodiscard]] QBindable<HyprlandWorkspace*> bindableFocusedWorkspace() const {
-		return &this->bFocusedWorkspace;
-	}
-
-	[[nodiscard]] QBindable<HyprlandToplevel*> bindableActiveToplevel() const {
-		return &this->bActiveToplevel;
-	}
+	[[nodiscard]] QBindable<HyprlandMonitor*> bindableFocusedMonitor() const;
+	[[nodiscard]] QBindable<HyprlandWorkspace*> bindableFocusedWorkspace() const;
+	[[nodiscard]] QBindable<HyprlandToplevel*> bindableActiveToplevel() const;
 
 	void setFocusedMonitor(HyprlandMonitor* monitor);
 
