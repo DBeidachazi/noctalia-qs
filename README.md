@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > This is a **community-maintained fork** of the archived [noctalia-dev/noctalia-qs](https://github.com/noctalia-dev/noctalia-qs). It exists to keep [Noctalia Shell v4](https://github.com/DBeidachazi/noctalia-shell) (AUR: `noctalia-legacy-v4`) building and running on current Arch Linux.
-> AUR package: [`noctalia-qs`](https://aur.archlinux.org/packages/noctalia-qs), built from [`packaging/aur/PKGBUILD`](packaging/aur/PKGBUILD).
+> AUR package: [`noctalia-qs-legacy-v4`](https://aur.archlinux.org/packages/noctalia-qs-legacy-v4), built from [`packaging/aur/PKGBUILD`](packaging/aur/PKGBUILD). It `provides` and `conflicts` with the original `noctalia-qs` so that you can decide knowingly whether to switch to this fork.
 >
 > Changes since upstream v0.0.12:
 > - **Qt 6.12 build fix**: ported upstream Quickshell's "use MOC includes instead of opaque pointer definitions" so Hyprland/i3 IPC and PipeWire compile again (`Meta Types must be fully defined`).
